@@ -1,0 +1,1 @@
+[{"error":false,"data":"Cancelar"},{"error":false,"data":"Cerrar"},{"error":false,"data":"Cargando"},{"error":false,"data":"Guardar cambios"},{"error":false,"data":"Ver menos..."},{"error":false,"data":"Mostrar m\u00e1s..."}]

